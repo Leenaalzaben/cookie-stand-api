@@ -1,37 +1,31 @@
-# api-quick-start
+# LAB - Class 34 || "Putting it All Together"
 
-Template Project for starting up CRUD API with Django Rest Framework
+## Project: Cookie Stands api || [Cookie Stands api](https://github.com/Leenaalzaben/cookie-stand-api/pull/1)
 
-## Customization Steps
+### Author || LeeNa Alzaben
 
-- DO NOT migrate yet
-- add additional dependencies as needed
-  - Re-export requirements.txt as needed
-- change `CookieStands` folder to the app name of your choice
-- Search through entire code base for `CookieStand`,`CookieStands` and `CookieStands` to modify code to use your resource
-  - `project/settings.py`
-  - `project/urls.py`
-  - App's files
-    - `views.py`
-    - `urls.py`
-    - `admin.py`
-    - `serializers.py`
-    - `permissions.py`
-  - "Front" files
-    - if including a customer facing portion of the site then update/recreate:
-      - `urls_front.py`
-      - `views_front.py`
-      - template files
-      - Make sure to update project `urls.py` to add routes to the "front".
-- Update CookieStandModel with fields you need
-  - Make sure to update other modules that would be affected by Model customizations. E.g. serializers, tests, etc.
-- Rename `project/.env.sample` to `.env` and update as needed
-  - To generate secret key use `python3 -c "import secrets; print(secrets.token_urlsafe())"`
-- Run makemigrations and migrate commands when ready.
-- Run `python manage.py collectstatic`
-  - This repository includes static assets in repository. If you are using a Content Delivery Network then remove `staticfiles` from repository.
-- Optional: Update `api_tester.py`
+### Setup
 
-## Database
+- Create virtual environment and activate it :
+`python -m venv .venv`
+`source .venv/bin/activate`
 
-**NOTE:** If you are using Postgres instead of SQLite then make sure to install `psycopg2-binary` and include in `requirements.txt`
+- Install requirements :
+`pip install -r requirements.txt`
+
+- To run the server
+- `python3 manage.py runserver`
+
+- Create a superuser with all permissions
+- `python3 manage.py createsuperuser`
+
+- Make migrations
+- `python3 manage.py makemigrations`
+- `python3 manage.py migrate`
+
+- Command for Docker part
+- `docker-compose up`
+- `docker-compose up --build`
+
+- `docker-compose run web python3 manage.py migrate`
+- `docker-compose run web python3 manage.py createsuperuser`

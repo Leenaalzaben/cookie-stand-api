@@ -6,6 +6,12 @@
 
 ### Setup
 
+- The username <br>
+`{
+    "username": "leena",0
+    "password": "0000",
+    "owner": 1
+}`
 - Create virtual environment and activate it :
 `python -m venv .venv`
 `source .venv/bin/activate`
